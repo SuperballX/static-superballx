@@ -1,0 +1,210 @@
+.landing-page {
+    padding-bottom: 20px;
+    .appbar {
+        background-color: #242435;
+    }
+    .intro-section {
+        margin-top: 150px;
+        .intro-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .intro-heading-1 {
+                font-size: 56px;
+                color: white;
+                font-weight: 900;
+            }
+            .intro-heading-2 {
+                font-size: 96px;
+                font-weight: 900;
+            }
+            .intro-heading-3 {
+                font-size: 56px;
+                font-weight: 900;
+            }
+            .intro-heading-4 {
+                font-weight: 500;
+                font-size: 18px;
+                color: white;
+                margin-top: 20px;
+                .you {
+                    color: #e744f6;
+                }
+            }
+            .form-container {
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                align-items: center;
+                gap: 10px;
+                margin-top: 40px;
+                margin-bottom: 5px;
+                .email {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    font-size: 15px;
+                    color: white;
+                    width: 130%;
+                    height: 55px;
+                    border-radius: 50px;
+                    background-color: #242435;
+                    border: 3px solid #3f3f55;
+                }
+                .subscribe-button-container {
+                    border: 2px solid transparent;
+                    text-align: center;
+                    border-radius: 50px;
+                    background-image: linear-gradient(#242435, #242435),
+                        linear-gradient(
+                            to right,
+                            #18f5f5 1.63%,
+                            #f5b7d2 25.71%,
+                            #e744f6 51.84%,
+                            #862dfb 71.31%,
+                            #00dbf9 100%
+                        );
+                    background-origin: border-box;
+                    background-clip: content-box, border-box;
+                    width: 220px;
+                    .subscribe-button {
+                        font-size: 16px;
+                        color: #fcfcfc;
+                        text-transform: none;
+                        font-weight: 700;
+                        padding: 15px;
+                        width: 150px;
+                    }
+                }
+            }
+        }
+        .first-ellipse {
+            position: absolute;
+            right: 350px;
+            bottom: 100%;
+        }
+        .second-ellipse {
+            position: absolute;
+            left: 370px;
+            bottom: 113%;
+            width: 50px;
+        }
+        .third-ellipse {
+            position: absolute;
+            left: 230px;
+            top: 270px;
+            width: 250px;
+        }
+        .crypto-image {
+            position: relative;
+        }
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .landing-page {
+        overflow: hidden;
+        .intro-section {
+            .intro-container {
+                // justify-content: space-evenly;
+                .intro-heading-1 {
+                    font-size: 30px;
+                }
+                .intro-heading-2 {
+                    font-size: 60px;
+                }
+                .intro-heading-3 {
+                    font-size: 40px;
+                }
+                .intro-heading-4 {
+                    font-size: 15px;
+                }
+                .form-container {
+                    .email {
+                        height: 40px;
+                        width: 80%;
+                    }
+                    .subscribe-button-container {
+                        display: flex;
+                        width: 110px;
+                        .subscribe-button {
+                            height: 45px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            .first-ellipse {
+                bottom: 340px;
+                right: 250px;
+                width: 90px;
+            }
+            .second-ellipse {
+                left: 230px;
+                bottom: 380px;
+                width: 40px;
+            }
+            .third-ellipse {
+                width: 140px;
+                left: 160px;
+                top: 190px;
+            }
+            .crypto-image {
+                width: 260px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .landing-page {
+        .intro-section {
+            margin-top: 60px;
+            overflow: hidden;
+            .intro-container {
+                flex-direction: column-reverse;
+                .intro-heading-1 {
+                    font-size: 40px;
+                }
+                .intro-heading-2 {
+                    font-size: 70px;
+                }
+                .intro-heading-3 {
+                    font-size: 40px;
+                }
+                .intro-heading-4 {
+                    font-size: 24px;
+                }
+                .form-container {
+                    flex-direction: column;
+                    gap: 20px;
+                    .email {
+                        width: 90%;
+                    }
+                    .subscribe-button-container {
+                        display: flex;
+                        justify-content: center;
+                        width: 100%;
+                        margin-bottom: 5px;
+                        .subscribe-button {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+            .first-ellipse {
+                bottom: 90%;
+                right: 90%;
+            }
+            .third-ellipse {
+                left: 60%;
+                top: 10%;
+                width: 50%;
+            }
+            .crypto-image {
+                width: 100%;
+                margin-bottom: 40px;
+                margin-top: 10px;
+            }
+        }
+    }
+}
