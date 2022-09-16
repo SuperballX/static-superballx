@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./App.scss";
 import AppBar from "@mui/material/AppBar";
 import logoImage from "../src/assets/Superball X.png";
-import bgImage from "../src/assets/bg.png";
 import ellipseImg from "../src/assets/Ellipse 41.png";
 import payWithCryptoImage from "../src/assets/Frame 7843.png";
 import payWithCryptoImageMobile from "../src/assets/Frame 7965.png";
@@ -28,12 +27,34 @@ function App() {
   const [error, setError] = useState<string>("");
   const emailRegex = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
 
+  const url = "https://api.sendinblue.com/v3/contacts";
+  const apiKey =
+    "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";
+
+  const options = {
+    method: "POST",
+    headers: {
+      accept: "application/json",
+      "content-type": "application/json",
+      "api-key": apiKey,
+    },
+    body: JSON.stringify({
+      email: email,
+      emailBlacklisted: false,
+      smsBlacklisted: false,
+      listIds: [36],
+      updateEnabled: false,
+      smtpBlacklistSender: ["user@example.com"],
+    }),
+  };
+
   const handleChange = (e: any) => {
     setEmail(e.target.value);
     if (!email || email) {
       setError("");
     }
   };
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (email === "") {
@@ -41,7 +62,12 @@ function App() {
     } else if (!emailRegex.test(email)) {
       setError("Email is incorrect!");
     } else {
-      alert("valid");
+      fetch(url, options)
+        .then((res) => res.json())
+        .then((json) => console.log(json))
+        .catch((err) => console.error("error:" + err));
+
+      setEmail("");
     }
   };
 
