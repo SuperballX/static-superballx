@@ -16,6 +16,7 @@ import {
   Typography,
   Button,
 } from "@mui/material";
+import Footer from "./components/layout/Footer/Footer";
 
 const theme = createTheme({
   typography: {
@@ -162,6 +163,7 @@ function App() {
           </Container>
         </div>
       </ThemeProvider>
+      <Footer />
     </>
   );
 }
