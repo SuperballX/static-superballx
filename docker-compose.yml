@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    volumes:
+      - static_volume:/app/client/build
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 8007:80
+    depends_on:
+      - app
+    volumes:
+      - static_volume:/app/client/build
+    container_name: static-superball
+
+volumes:
+  static_volume:
