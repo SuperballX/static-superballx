@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.scss";
 import AppBar from "@mui/material/AppBar";
-import logoImage from "../src/assets/Superball X.png";
 import ellipseImg from "../src/assets/Ellipse 41.png";
 import payWithCryptoImage from "../src/assets/Frame 7843.png";
 import payWithCryptoImageMobile from "../src/assets/Frame 7965.png";
@@ -132,20 +131,22 @@ function App() {
                 </Typography>
                 <form onSubmit={handleSubmit}>
                   <Box className="form-container">
-                    <input
-                      type="text"
-                      placeholder="Email@example.com"
-                      className="email"
-                      value={email}
-                      onChange={handleChange}
-                    />
-                    <Box className="subscribe-button-container">
+                    <div className="validation-container">
+                      <input
+                        type="text"
+                        placeholder="Email@example.com"
+                        className="email"
+                        value={email}
+                        onChange={handleChange}
+                      />
+                      <span style={{ color: "brown" }}>{error}</span>
+                    </div>
+                    <div className="subscribe-button-container">
                       <Button type="submit" className="subscribe-button">
                         Subscribe
                       </Button>
-                    </Box>
+                    </div>
                   </Box>
-                  <span style={{ color: "brown" }}>{error}</span>
                 </form>
               </Box>
 
