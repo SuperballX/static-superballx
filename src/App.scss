@@ -2,6 +2,21 @@
     padding-bottom: 20px;
     .appbar {
         background-color: #242435;
+        .title {
+            font-weight: 900;
+            font-size: 20px;
+            background: linear-gradient(
+                100.08deg,
+                #18f5f5 4.04%,
+                #f5b7d2 23.51%,
+                #e744f6 44.63%,
+                #862dfb 60.37%,
+                #00dbf9 83.57%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
     }
     .intro-section {
         margin-top: 150px;
@@ -17,10 +32,34 @@
             .intro-heading-2 {
                 font-size: 96px;
                 font-weight: 900;
+                background: linear-gradient(
+                        100.21deg,
+                        #18f5f5 1.63%,
+                        #f5b7d2 25.71%,
+                        #e744f6 51.84%,
+                        #862dfb 71.31%,
+                        #00dbf9 100%
+                    ),
+                    #ffffff;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
             }
             .intro-heading-3 {
                 font-size: 56px;
                 font-weight: 900;
+                background: linear-gradient(
+                        100.21deg,
+                        #18f5f5 1.63%,
+                        #f5b7d2 25.71%,
+                        #e744f6 51.84%,
+                        #862dfb 71.31%,
+                        #00dbf9 100%
+                    ),
+                    #ffffff;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
             }
             .intro-heading-4 {
                 font-weight: 500;
