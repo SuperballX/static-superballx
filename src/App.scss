@@ -2,6 +2,21 @@
     padding-bottom: 20px;
     .appbar {
         background-color: #242435;
+        .title {
+            font-weight: 900;
+            font-size: 20px;
+            background: linear-gradient(
+                100.08deg,
+                #18f5f5 4.04%,
+                #f5b7d2 23.51%,
+                #e744f6 44.63%,
+                #862dfb 60.37%,
+                #00dbf9 83.57%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
     }
     .intro-section {
         margin-top: 150px;
@@ -17,10 +32,34 @@
             .intro-heading-2 {
                 font-size: 96px;
                 font-weight: 900;
+                background: linear-gradient(
+                        100.21deg,
+                        #18f5f5 1.63%,
+                        #f5b7d2 25.71%,
+                        #e744f6 51.84%,
+                        #862dfb 71.31%,
+                        #00dbf9 100%
+                    ),
+                    #ffffff;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
             }
             .intro-heading-3 {
                 font-size: 56px;
                 font-weight: 900;
+                background: linear-gradient(
+                        100.21deg,
+                        #18f5f5 1.63%,
+                        #f5b7d2 25.71%,
+                        #e744f6 51.84%,
+                        #862dfb 71.31%,
+                        #00dbf9 100%
+                    ),
+                    #ffffff;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
             }
             .intro-heading-4 {
                 font-weight: 500;
@@ -33,24 +72,30 @@
             }
             .form-container {
                 display: flex;
-                justify-content: center;
                 flex-direction: row;
-                align-items: center;
                 gap: 10px;
                 margin-top: 40px;
                 margin-bottom: 5px;
+                .validation-container {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                }
                 .email {
                     padding-left: 20px;
                     padding-right: 20px;
                     font-size: 15px;
                     color: white;
-                    width: 130%;
+                    width: 350px;
                     height: 55px;
                     border-radius: 50px;
                     background-color: #242435;
                     border: 3px solid #3f3f55;
                 }
                 .subscribe-button-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     border: 2px solid transparent;
                     text-align: center;
                     border-radius: 50px;
@@ -65,14 +110,14 @@
                         );
                     background-origin: border-box;
                     background-clip: content-box, border-box;
-                    width: 220px;
+                    width: 160px;
+                    height: 55px;
                     .subscribe-button {
                         font-size: 16px;
                         color: #fcfcfc;
                         text-transform: none;
                         font-weight: 700;
                         padding: 15px;
-                        width: 150px;
                     }
                 }
             }
@@ -105,7 +150,6 @@
         overflow: hidden;
         .intro-section {
             .intro-container {
-                // justify-content: space-evenly;
                 .intro-heading-1 {
                     font-size: 30px;
                 }
@@ -121,26 +165,26 @@
                 .form-container {
                     .email {
                         height: 40px;
-                        width: 80%;
+                        width: 250px;
                     }
                     .subscribe-button-container {
                         display: flex;
                         width: 110px;
+                        height: 45px;
                         .subscribe-button {
-                            height: 45px;
                             font-size: 14px;
                         }
                     }
                 }
             }
             .first-ellipse {
-                bottom: 340px;
+                bottom: 108%;
                 right: 250px;
                 width: 90px;
             }
             .second-ellipse {
                 left: 230px;
-                bottom: 380px;
+                bottom: 120%;
                 width: 40px;
             }
             .third-ellipse {

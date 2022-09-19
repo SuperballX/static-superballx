@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./App.scss";
 import AppBar from "@mui/material/AppBar";
-import logoImage from "../src/assets/Superball X.png";
 import ellipseImg from "../src/assets/Ellipse 41.png";
 import payWithCryptoImage from "../src/assets/Frame 7843.png";
 import payWithCryptoImageMobile from "../src/assets/Frame 7965.png";
 import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "@mui/material/styles";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import {
   Container,
   Toolbar,
@@ -25,8 +26,10 @@ const theme = createTheme({
 function App() {
   const [email, setEmail] = useState<string>("");
   const [error, setError] = useState<string>("");
-  const emailRegex = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
+  const [windowSize, setWindowSize] = useState<number>();
+  const [cryptoImage, setCryptoImage] = useState<string>(payWithCryptoImage);
 
+  const emailRegex = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
   const url = "https://api.sendinblue.com/v3/contacts";
   const apiKey =
     "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";
@@ -55,30 +58,33 @@ function App() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const subscribeUser = async () => {
+    const sub = await fetch(url, options);
+    const user = await sub.json();
+    if (user.message) {
+      toast.error("Something went wrong! Please try again.");
+    } else {
+      toast.success("Subscribed.");
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (email === "") {
       setError("Email is required!");
     } else if (!emailRegex.test(email)) {
       setError("Email is incorrect!");
     } else {
-      fetch(url, options)
-        .then((res) => res.json())
-        .then((json) => console.log(json))
-        .catch((err) => console.error("error:" + err));
-
+      subscribeUser();
       setEmail("");
     }
   };
-
-  const [windowSize, setWindowSize] = useState<number>();
-  const [cryptoImage, setCryptoImage] = useState<string>(payWithCryptoImage);
 
   useEffect(() => {
     function handleResize() {
       setWindowSize(window.innerWidth);
     }
-    console.log("a");
+
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -98,79 +104,65 @@ function App() {
   }, []);
 
   return (
-    <ThemeProvider theme={theme}>
-      <div className="landing-page">
-        <AppBar className="appbar">
-          <Container maxWidth="lg" disableGutters>
-            <Toolbar>
-              <img src={logoImage} />
-            </Toolbar>
-          </Container>
-        </AppBar>
-        <Container maxWidth="lg" className="intro-section">
-          <Stack className="intro-container">
-            <Box>
-              <Typography className="intro-heading-1">
-                Play now to win
-              </Typography>
-              <Typography
-                sx={{
-                  background:
-                    "linear-gradient(100.21deg, #18F5F5 1.63%, #F5B7D2 25.71%, #E744F6 51.84%, #862DFB 71.31%, #00DBF9 100%), #FFFFFF;",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-                className="intro-heading-2"
-              >
-                £30,000
-              </Typography>
-              <Typography
-                className="intro-heading-3"
-                sx={{
-                  background:
-                    "linear-gradient(100.21deg, #18F5F5 1.63%, #F5B7D2 25.71%, #E744F6 51.84%, #862DFB 71.31%, #00DBF9 100%), #FFFFFF;",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
-                in cash/crypto
-              </Typography>
-              <Typography className="intro-heading-4">
-                One person is guaranteed to win it - and that could be{" "}
-                <span className="you">you!</span>
-              </Typography>
-              <form onSubmit={handleSubmit}>
-                <Box className="form-container">
-                  <input
-                    type="text"
-                    placeholder="Email@example.com"
-                    // pattern="[a-z0-9]+@[a-z]+\.[a-z]{2,3}"
-                    className="email"
-                    value={email}
-                    onChange={handleChange}
-                  />
-                  <Box className="subscribe-button-container">
-                    <Button type="submit" className="subscribe-button">
-                      Subscribe
-                    </Button>
-                  </Box>
-                </Box>
-                <span style={{ color: "brown" }}>{error}</span>
-              </form>
-            </Box>
-
-            <Box position={"relative"} mt={2}>
+    <>
+      <ToastContainer autoClose={5000} />
+      <ThemeProvider theme={theme}>
+        <div className="landing-page">
+          <AppBar className="appbar">
+            <Container maxWidth="lg" disableGutters>
+              <Toolbar>
+                <Typography className="title">Superball X</Typography>
+              </Toolbar>
+            </Container>
+          </AppBar>
+          <Container maxWidth="lg" className="intro-section">
+            <Stack className="intro-container">
               <Box>
-                <img src={ellipseImg} className="first-ellipse" />
-                <img src={ellipseImg} className="second-ellipse" />
-                <img src={ellipseImg} className="third-ellipse" />
-                <img src={cryptoImage} className="crypto-image" />
+                <Typography className="intro-heading-1">
+                  Play now to win
+                </Typography>
+                <Typography className="intro-heading-2">£30,000</Typography>
+                <Typography className="intro-heading-3">
+                  in cash/crypto
+                </Typography>
+                <Typography className="intro-heading-4">
+                  One person is guaranteed to win it - and that could be{" "}
+                  <span className="you">you!</span>
+                </Typography>
+                <form onSubmit={handleSubmit}>
+                  <Box className="form-container">
+                    <div className="validation-container">
+                      <input
+                        type="text"
+                        placeholder="Email@example.com"
+                        className="email"
+                        value={email}
+                        onChange={handleChange}
+                      />
+                      <span style={{ color: "brown" }}>{error}</span>
+                    </div>
+                    <div className="subscribe-button-container">
+                      <Button type="submit" className="subscribe-button">
+                        Subscribe
+                      </Button>
+                    </div>
+                  </Box>
+                </form>
               </Box>
-            </Box>
-          </Stack>
-        </Container>
-      </div>
-    </ThemeProvider>
+
+              <Box position={"relative"} mt={2}>
+                <Box>
+                  <img src={ellipseImg} className="first-ellipse" />
+                  <img src={ellipseImg} className="second-ellipse" />
+                  <img src={ellipseImg} className="third-ellipse" />
+                  <img src={cryptoImage} className="crypto-image" />
+                </Box>
+              </Box>
+            </Stack>
+          </Container>
+        </div>
+      </ThemeProvider>
+    </>
   );
 }
 
