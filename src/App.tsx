@@ -111,7 +111,7 @@ function App() {
           <AppBar className="appbar">
             <Container maxWidth="lg" disableGutters>
               <Toolbar>
-                <Typography className="title">Superball X</Typography>
+                <Typography className="title">SUPERBALL X</Typography>
               </Toolbar>
             </Container>
           </AppBar>
