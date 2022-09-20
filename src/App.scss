@@ -20,6 +20,7 @@
     }
     .intro-section {
         margin-top: 150px;
+        min-height: 85vh;
         .intro-container {
             display: flex;
             flex-direction: row;
@@ -150,6 +151,7 @@
     .landing-page {
         overflow: hidden;
         .intro-section {
+            min-height: 60vh;
             .intro-container {
                 .intro-heading-1 {
                     font-size: 30px;
