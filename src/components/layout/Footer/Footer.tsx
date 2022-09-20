@@ -20,7 +20,19 @@ const Footer = () => {
           <img src={tiktokImg} />
         </Box>
         <Box className="copyright-container">
-          <Typography className="copyright-text">
+          <Typography className="text">
+            Superball X Limited is a company registered in Scotland with the
+            company number SC737654.
+          </Typography>
+          <Typography className="text">
+            Superball X Limited's trading names are superballx.co.uk and
+            superballx.com
+          </Typography>
+          <Typography className="text">
+            Contact us by post at 272 Bath Street, Glasgow, G2 4JR, Scotland or
+            by emailing gavin@superballx.com
+          </Typography>
+          <Typography className="text">
             2022 © Superball X. All rigts reserved{" "}
           </Typography>
         </Box>

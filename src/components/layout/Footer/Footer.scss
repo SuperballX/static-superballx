@@ -34,9 +34,15 @@
 
     .copyright-container {
         margin-top: 20px;
-        margin-bottom: 20px;
-        .copyright-text {
+        margin-bottom: 30px;
+        text-align: center;
+        width: 70%;
+        .text {
             color: white;
+            line-height: 30px;
+        }
+        .text:last-child {
+            margin-top: 30px;
         }
     }
 }
