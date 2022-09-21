@@ -93,6 +93,9 @@
                     border-radius: 50px;
                     background-color: #242435;
                     border: 3px solid #3f3f55;
+                    &::-webkit-input-placeholder {
+                        font-weight: bolder;
+                    }
                 }
                 .subscribe-button-container {
                     display: flex;
