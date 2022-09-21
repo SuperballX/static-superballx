@@ -3,6 +3,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
+    position: absolute;
     bottom: 0;
     .footer-title-container {
         .footer-title-text {
@@ -33,12 +35,34 @@
 
     .copyright-container {
         margin-top: 20px;
-        margin-bottom: 10px;
         text-align: center;
         width: 70%;
         .text {
             color: white;
             line-height: 30px;
         }
+    }
+}
+
+@media only screen and (max-height: 865px) {
+    .footer-container {
+        position: relative;
+    }
+}
+@media only screen and (max-width: 1500px) {
+    .footer-container {
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .footer-container {
+        position: absolute;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .footer-container {
+        position: relative;
     }
 }

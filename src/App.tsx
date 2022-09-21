@@ -161,9 +161,9 @@ function App() {
               </Box>
             </Stack>
           </Container>
+          <Footer />
         </div>
       </ThemeProvider>
-      <Footer />
     </>
   );
 }

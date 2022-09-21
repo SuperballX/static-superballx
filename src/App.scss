@@ -1,5 +1,4 @@
 .landing-page {
-    padding-bottom: 20px;
     .appbar {
         background-color: #242435;
         .title {
@@ -20,7 +19,8 @@
     }
     .intro-section {
         margin-top: 150px;
-        min-height: 55vh;
+        min-height: 70vh;
+        position: relative;
         .intro-container {
             display: flex;
             flex-direction: row;
@@ -151,7 +151,6 @@
     .landing-page {
         overflow: hidden;
         .intro-section {
-            min-height: 50vh;
             .intro-container {
                 .intro-heading-1 {
                     font-size: 30px;
