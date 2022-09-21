@@ -1,5 +1,4 @@
 .footer-container {
-    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,15 +33,12 @@
 
     .copyright-container {
         margin-top: 20px;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
         text-align: center;
         width: 70%;
         .text {
             color: white;
             line-height: 30px;
-        }
-        .text:last-child {
-            margin-top: 30px;
         }
     }
 }
