@@ -40,6 +40,10 @@ const footerLinks: FooterLink[] = [
     link: "https://www.reddit.com/user/SuperballX",
     image: "",
   },
+  {
+    link: "https://www.reddit.com/user/SuperballX",
+    image: "",
+  },
 ];
 
 const Footer = () => {
