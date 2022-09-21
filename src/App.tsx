@@ -135,7 +135,7 @@ function App() {
                     <div className="validation-container">
                       <input
                         type="text"
-                        placeholder="Email@example.com"
+                        placeholder="Enter your email"
                         className="email"
                         value={email}
                         onChange={handleChange}

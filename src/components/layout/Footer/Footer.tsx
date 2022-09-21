@@ -5,6 +5,43 @@ import twitterImg from "../../../assets/twitter.png";
 import facebookImg from "../../../assets/facebook.png";
 import discordImg from "../../../assets/discord.png";
 import tiktokImg from "../../../assets/tiktok.png";
+
+interface FooterLink {
+  link: string;
+  image?: string;
+}
+
+const footerLinks: FooterLink[] = [
+  {
+    link: "https://www.linkedin.com/company/superball-x/",
+    image: linkdinImg,
+  },
+  {
+    link: "https://www.facebook.com/SuperballX",
+    image: facebookImg,
+  },
+  {
+    link: "https://twitter.com/x_superball",
+    image: twitterImg,
+  },
+  {
+    link: "https://www.instagram.com/superballx/",
+    image: discordImg,
+  },
+  {
+    link: "https://www.reddit.com/user/SuperballX",
+    image: tiktokImg,
+  },
+  {
+    link: "https://www.instagram.com/superballx/",
+    image: "",
+  },
+  {
+    link: "https://www.reddit.com/user/SuperballX",
+    image: "",
+  },
+];
+
 const Footer = () => {
   return (
     <>
@@ -13,11 +50,17 @@ const Footer = () => {
           <Typography className="footer-title-text">SUPERBALL X</Typography>
         </Box>
         <Box className="footer-links-container">
-          <img src={linkdinImg} />
-          <img src={twitterImg} />
-          <img src={facebookImg} />
-          <img src={discordImg} />
-          <img src={tiktokImg} />
+          {footerLinks.map((item, index) => {
+            return (
+              <a key={index} href={item.link} target="_blank">
+                {item.image ? (
+                  <img src={item.image} />
+                ) : (
+                  <div className="emptyImage"></div>
+                )}
+              </a>
+            );
+          })}
         </Box>
         <Box className="copyright-container">
           <Typography className="text">
