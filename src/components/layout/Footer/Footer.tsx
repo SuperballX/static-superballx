@@ -5,6 +5,7 @@ import twitterImg from "../../../assets/twitter.png";
 import facebookImg from "../../../assets/facebook.png";
 import discordImg from "../../../assets/discord.png";
 import tiktokImg from "../../../assets/tiktok.png";
+import emptyIconImg from "../../../assets/emptyIcon.png";
 
 interface FooterLink {
   link: string;
@@ -34,15 +35,15 @@ const footerLinks: FooterLink[] = [
   },
   {
     link: "https://www.instagram.com/superballx/",
-    image: "",
+    image: emptyIconImg,
   },
   {
     link: "https://www.reddit.com/user/SuperballX",
-    image: "",
+    image: emptyIconImg,
   },
   {
     link: "https://www.reddit.com/user/SuperballX",
-    image: "",
+    image: emptyIconImg,
   },
 ];
 
@@ -57,11 +58,7 @@ const Footer = () => {
           {footerLinks.map((item, index) => {
             return (
               <a key={index} href={item.link} target="_blank">
-                {item.image ? (
-                  <img src={item.image} />
-                ) : (
-                  <div className="emptyImage"></div>
-                )}
+                <img className="icon-image" src={item.image} />
               </a>
             );
           })}
