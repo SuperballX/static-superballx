@@ -32,19 +32,7 @@ const footerLinks: FooterLink[] = [
   {
     link: "https://www.reddit.com/user/SuperballX",
     image: tiktokImg,
-  },
-  {
-    link: "https://www.instagram.com/superballx/",
-    image: emptyIconImg,
-  },
-  {
-    link: "https://www.reddit.com/user/SuperballX",
-    image: emptyIconImg,
-  },
-  {
-    link: "https://www.reddit.com/user/SuperballX",
-    image: emptyIconImg,
-  },
+  }
 ];
 
 const Footer = () => {
