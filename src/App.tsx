@@ -28,7 +28,6 @@ function App() {
   const [email, setEmail] = useState<string>("");
   const [error, setError] = useState<string>("");
   const [windowSize, setWindowSize] = useState<number>();
-  const [cryptoImage, setCryptoImage] = useState<string>(payWithCryptoImage);
 
   const emailRegex = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
   const url = "https://api.sendinblue.com/v3/contacts";
@@ -91,16 +90,6 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (typeof windowSize !== "undefined") {
-      if (windowSize <= 760) {
-        setCryptoImage(payWithCryptoImageMobile);
-      } else {
-        setCryptoImage(payWithCryptoImage);
-      }
-    }
-  }, [windowSize]);
-
-  useEffect(() => {
     setWindowSize(window.innerWidth);
   }, []);
 
@@ -147,6 +136,12 @@ function App() {
                         Subscribe
                       </Button>
                     </div>
+                    {typeof windowSize !== "undefined" && windowSize <= 760 && (
+                      <img
+                        src={payWithCryptoImageMobile}
+                        className="crypto-image"
+                      />
+                    )}
                   </Box>
                 </form>
               </Box>
@@ -156,7 +151,9 @@ function App() {
                   <img src={ellipseImg} className="first-ellipse" />
                   <img src={ellipseImg} className="second-ellipse" />
                   <img src={ellipseImg} className="third-ellipse" />
-                  <img src={cryptoImage} className="crypto-image" />
+                  {typeof windowSize !== "undefined" && windowSize > 760 && (
+                    <img src={payWithCryptoImage} className="crypto-image" />
+                  )}
                 </Box>
               </Box>
             </Stack>

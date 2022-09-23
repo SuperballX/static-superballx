@@ -212,28 +212,40 @@
             .intro-container {
                 flex-direction: column-reverse;
                 .intro-heading-1 {
-                    font-size: 40px;
+                    font-size: 35px;
+                    position: relative;
+                    z-index: 1;
                 }
                 .intro-heading-2 {
-                    font-size: 70px;
+                    font-size: 60px;
+                    position: relative;
+                    z-index: 1;
+                    line-height: 90px;
                 }
                 .intro-heading-3 {
                     font-size: 40px;
+                    position: relative;
+                    z-index: 1;
                 }
                 .intro-heading-4 {
-                    font-size: 24px;
+                    font-size: 20px;
+                    position: relative;
+                    z-index: 1;
                 }
                 .form-container {
                     flex-direction: column;
                     gap: 20px;
+                    position: relative;
+                    z-index: 1;
                     .email {
+                        margin-top: -20px;
                         width: 90%;
                     }
                     .subscribe-button-container {
                         display: flex;
                         justify-content: center;
                         width: 100%;
-                        margin-bottom: 5px;
+
                         .subscribe-button {
                             font-size: 18px;
                         }
@@ -243,11 +255,16 @@
             .first-ellipse {
                 bottom: 90%;
                 right: 90%;
+                position: absolute;
+            }
+            .second-ellipse {
+                width: 0;
             }
             .third-ellipse {
                 left: 60%;
                 top: 10%;
                 width: 50%;
+                position: absolute;
             }
             .crypto-image {
                 width: 100%;
