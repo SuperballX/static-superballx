@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Container } from "@mui/material";
 import "../Footer/Footer.scss";
 import linkdinImg from "../../../assets/linkdin.png";
 import twitterImg from "../../../assets/twitter.png";
@@ -32,16 +32,13 @@ const footerLinks: FooterLink[] = [
   {
     link: "https://www.reddit.com/user/SuperballX",
     image: tiktokImg,
-  }
+  },
 ];
 
 const Footer = () => {
   return (
     <>
       <Box className="footer-container">
-        <Box className="footer-title-container">
-          <Typography className="footer-title-text">SUPERBALL X</Typography>
-        </Box>
         <Box className="footer-links-container">
           {footerLinks.map((item, index) => {
             return (
@@ -51,23 +48,18 @@ const Footer = () => {
             );
           })}
         </Box>
-        <Box className="copyright-container">
+        <Container maxWidth="lg" className="copyright-container">
           <Typography className="text">
             Superball X Limited is a company registered in Scotland with the
-            company number SC737654.
-          </Typography>
-          <Typography className="text">
-            Superball X Limited's trading names are superballx.co.uk and
-            superballx.com
-          </Typography>
-          <Typography className="text">
-            Contact us by post at 272 Bath Street, Glasgow, G2 4JR, Scotland or
-            by emailing gavin@superballx.com
+            company number SC737654. Superball X Limited's trading names are
+            superballx.co.uk and superballx.com Contact us by post at 272 Bath
+            Street, Glasgow, G2 4JR, Scotland or by emailing
+            gavin@superballx.com
           </Typography>
           <Typography className="text">
             2022 © Superball X. All rigts reserved{" "}
           </Typography>
-        </Box>
+        </Container>
       </Box>
     </>
   );
