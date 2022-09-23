@@ -5,7 +5,9 @@ import twitterImg from "../../../assets/twitter.png";
 import facebookImg from "../../../assets/facebook.png";
 import discordImg from "../../../assets/discord.png";
 import tiktokImg from "../../../assets/tiktok.png";
-import emptyIconImg from "../../../assets/emptyIcon.png";
+import instagramImg from "../../../assets/instagram.png";
+import redditImg from "../../../assets/reddit.png";
+import telegramImg from "../../../assets/telegram.png";
 
 interface FooterLink {
   link: string;
@@ -27,12 +29,24 @@ const footerLinks: FooterLink[] = [
   },
   {
     link: "https://www.instagram.com/superballx/",
+    image: instagramImg,
+  },
+  {
+    link: "https://www.reddit.com/user/SuperballX",
+    image: redditImg,
+  },
+  {
+    link: "https://www.reddit.com/user/SuperballX",
+    image: telegramImg,
+  },
+  {
+    link: "https://www.reddit.com/user/SuperballX",
     image: discordImg,
   },
   {
     link: "https://www.reddit.com/user/SuperballX",
     image: tiktokImg,
-  }
+  },
 ];
 
 const Footer = () => {
