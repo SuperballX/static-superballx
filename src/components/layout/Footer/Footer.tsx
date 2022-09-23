@@ -70,7 +70,7 @@ const Footer = () => {
             Street, Glasgow, G2 4JR, Scotland or by emailing
             {" "}<a className="email" href="mailto:gavin@superballx.com">gavin@superballx.com.</a>
           </Typography>
-          <Typography className="text">
+          <Typography className="text copyright">
             2022 © Superball X. All rigts reserved{" "}
           </Typography>
         </Container>
