@@ -66,11 +66,11 @@ const Footer = () => {
           <Typography className="text">
             Superball X Limited is a company registered in Scotland with the
             company number SC737654. Superball X Limited's trading names are
-            superballx.co.uk and superballx.com Contact us by post at 272 Bath
+            superballx.co.uk and superballx.com. Contact us by post at 272 Bath
             Street, Glasgow, G2 4JR, Scotland or by emailing
-            gavin@superballx.com
+            {" "}<a className="email" href="mailto:gavin@superballx.com">gavin@superballx.com.</a>
           </Typography>
-          <Typography className="text">
+          <Typography className="text copyright">
             2022 © Superball X. All rigts reserved{" "}
           </Typography>
         </Container>

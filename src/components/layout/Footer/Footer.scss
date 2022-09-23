@@ -46,6 +46,16 @@
         .text {
             color: white;
             line-height: 30px;
+            text-align: justify;
+        }
+
+        .email {
+            color: white;
+            text-decoration: none;
+        }
+
+        .copyright {
+            text-align: center;
         }
     }
 }
