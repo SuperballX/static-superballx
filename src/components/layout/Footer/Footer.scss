@@ -34,8 +34,8 @@
         margin-top: 25px;
         .icon-image {
             background-color: #3f3f55;
-            width: 24px;
-            height: 24px;
+            width: 32px;
+            height: 32px;
             border-radius: 8px;
         }
     }
@@ -73,11 +73,23 @@
 @media only screen and (max-width: 980px) {
     .footer-container {
         position: absolute;
+        .footer-links-container {
+            .icon-image {
+                width: 24px;
+                height: 24px;
+            }
+        }
     }
 }
 
 @media only screen and (max-width: 760px) {
     .footer-container {
         position: relative;
+        .footer-links-container {
+            .icon-image {
+                width: 24px;
+                height: 24px;
+            }
+        }
     }
 }
