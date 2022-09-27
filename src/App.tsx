@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.scss";
 import AppBar from "@mui/material/AppBar";
 import ellipseImg from "../src/assets/Ellipse 41.png";
-import payWithCryptoImage from "../src/assets/Frame 7843.png";
+import payWithCryptoImage from "../src/assets/receipt-2.svg";
 import payWithCryptoImageMobile from "../src/assets/Frame 7965.png";
 import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "@mui/material/styles";
@@ -137,22 +137,39 @@ function App() {
                       </Button>
                     </div>
                     {typeof windowSize !== "undefined" && windowSize <= 760 && (
-                      <img
-                        src={payWithCryptoImageMobile}
-                        className="crypto-image"
-                      />
+                      <div className="crypto-image-container">
+                        <img
+                          src={payWithCryptoImage}
+                          className="crypto-image-mobile"
+                        />
+                        <div className="mobile-view-content">
+                          <Typography className="value">£1</Typography>
+                          <Typography className="pay">
+                            or pay with crypto
+                          </Typography>
+                        </div>
+                      </div>
                     )}
                   </Box>
                 </form>
               </Box>
 
-              <Box position={"relative"} mt={2}>
-                <Box>
+              <Box>
+                <Box sx={{ borderRadius: "200px" }}>
                   <img src={ellipseImg} className="first-ellipse" />
                   <img src={ellipseImg} className="second-ellipse" />
                   <img src={ellipseImg} className="third-ellipse" />
                   {typeof windowSize !== "undefined" && windowSize > 760 && (
-                    <img src={payWithCryptoImage} className="crypto-image" />
+                    <div className="crypto-image-container">
+                      <img
+                        src={payWithCryptoImage}
+                        className="crypto-image-desktop"
+                      />
+                      <Typography className="value">£1</Typography>
+                      <Typography className="pay">
+                        or pay with crypto
+                      </Typography>
+                    </div>
                   )}
                 </Box>
               </Box>

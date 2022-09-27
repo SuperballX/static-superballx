@@ -25,6 +25,7 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            gap: 30px;
             .intro-heading-1 {
                 font-size: 56px;
                 color: white;
@@ -123,29 +124,57 @@
                         text-transform: none;
                         font-weight: 700;
                         padding: 15px;
+                        width: 100%;
+                        border-radius: 25px;
+                        height: 50px;
                     }
                 }
             }
         }
         .first-ellipse {
             position: absolute;
-            right: 350px;
-            bottom: 100%;
+            right: 35%;
+            bottom: 99%;
         }
         .second-ellipse {
             position: absolute;
-            left: 370px;
-            bottom: 113%;
+            left: 100%;
+            top: -95px;
             width: 50px;
         }
         .third-ellipse {
             position: absolute;
-            left: 230px;
+            left: 85%;
             top: 270px;
             width: 250px;
         }
-        .crypto-image {
+        .crypto-image-container {
             position: relative;
+            width: 386.31px;
+            height: 410.32px;
+            border-width: 4px;
+            border-style: solid;
+            border-radius: 40px;
+            border-top-color: rgba(231, 68, 246, 0.3);
+            border-right-color: rgba(24, 245, 245, 0.3);
+            border-bottom-color: rgba(231, 68, 246, 0.3);
+            border-left-color: rgba(24, 245, 245, 0.3);
+            backdrop-filter: blur(40px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            .value {
+                font-weight: 700;
+                font-size: 64px;
+                color: #e744f6;
+            }
+            .pay {
+                font-weight: 500;
+                font-size: 20px;
+                color: #fcfcfc;
+            }
         }
     }
 }
@@ -183,22 +212,30 @@
                 }
             }
             .first-ellipse {
-                bottom: 108%;
+                bottom: 102%;
                 right: 250px;
                 width: 90px;
             }
             .second-ellipse {
-                left: 230px;
-                bottom: 120%;
+                left: 93%;
+                bottom: 107%;
                 width: 40px;
             }
             .third-ellipse {
                 width: 140px;
-                left: 160px;
+                left: 83%;
                 top: 190px;
             }
-            .crypto-image {
+            .crypto-image-container {
                 width: 260px;
+                height: 260px;
+
+                .crypto-image-desktop {
+                    width: 200px;
+                }
+                .value {
+                    font-size: 40px;
+                }
             }
         }
     }
@@ -208,35 +245,26 @@
     .landing-page {
         .intro-section {
             margin-top: 60px;
-            overflow: hidden;
             .intro-container {
                 flex-direction: column-reverse;
                 .intro-heading-1 {
                     font-size: 35px;
-                    position: relative;
-                    z-index: 1;
                 }
                 .intro-heading-2 {
                     font-size: 60px;
-                    position: relative;
-                    z-index: 1;
+
                     line-height: 90px;
                 }
                 .intro-heading-3 {
                     font-size: 40px;
-                    position: relative;
-                    z-index: 1;
                 }
                 .intro-heading-4 {
                     font-size: 20px;
-                    position: relative;
-                    z-index: 1;
                 }
                 .form-container {
                     flex-direction: column;
                     gap: 20px;
-                    position: relative;
-                    z-index: 1;
+
                     .email {
                         margin-top: -20px;
                         width: 90%;
@@ -253,23 +281,50 @@
                 }
             }
             .first-ellipse {
-                bottom: 90%;
-                right: 90%;
+                bottom: 97%;
+                right: 85%;
                 position: absolute;
+                z-index: -1;
             }
             .second-ellipse {
-                width: 0;
+                width: 10px;
             }
             .third-ellipse {
                 left: 60%;
-                top: 10%;
+                top: 80%;
                 width: 50%;
                 position: absolute;
+                z-index: -1;
             }
-            .crypto-image {
+            .crypto-image-container {
+                flex-direction: row;
+                justify-content: space-evenly;
                 width: 100%;
-                margin-bottom: 40px;
-                margin-top: 10px;
+                height: 155px;
+
+                .mobile-view-content {
+                    .value {
+                        color: white;
+                        font-size: 50px;
+                    }
+                }
+                .crypto-image-mobile {
+                    width: 135px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .landing-page {
+        .intro-section {
+            .crypto-image-container {
+                flex-direction: column;
+                height: 220px;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
             }
         }
     }
