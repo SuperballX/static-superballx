@@ -36,15 +36,15 @@ const footerLinks: FooterLink[] = [
     image: redditImg,
   },
   {
-    link: "https://www.reddit.com/user/SuperballX",
+    link: "https://t.me/+1pthDP1jxGwxZGRk",
     image: telegramImg,
   },
   {
-    link: "https://www.reddit.com/user/SuperballX",
+    link: "https://discord.gg/RKB2BvmdMW",
     image: discordImg,
   },
   {
-    link: "https://www.reddit.com/user/SuperballX",
+    link: "http://www.tiktok.com/@superballx",
     image: tiktokImg,
   },
 ];
