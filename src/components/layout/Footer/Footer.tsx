@@ -1,13 +1,13 @@
 import { Box, Typography, Container } from "@mui/material";
 import "../Footer/Footer.scss";
-import linkdinImg from "../../../assets/linkdin.png";
-import twitterImg from "../../../assets/twitter.png";
-import facebookImg from "../../../assets/facebook.png";
-import discordImg from "../../../assets/discord.png";
-import tiktokImg from "../../../assets/tiktok.png";
-import instagramImg from "../../../assets/instagram.png";
-import redditImg from "../../../assets/reddit.png";
-import telegramImg from "../../../assets/telegram.png";
+import linkdinImg from "../../../assets/linkdein.svg";
+import twitterImg from "../../../assets/twitter.svg";
+import facebookImg from "../../../assets/facebook.svg";
+import discordImg from "../../../assets/discord.svg";
+import tiktokImg from "../../../assets/tiktok.svg";
+import instagramImg from "../../../assets/instagram.svg";
+import redditImg from "../../../assets/reddit.svg";
+import telegramImg from "../../../assets/telegram.svg";
 
 interface FooterLink {
   link: string;
