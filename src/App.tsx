@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.scss";
 import AppBar from "@mui/material/AppBar";
-import ellipseImg from "../src/assets/Ellipse 41.png";
+import ellipseImg from "../src/assets/Ellipse 41.svg";
 import payWithCryptoImage from "../src/assets/receipt-2.svg";
 import payWithCryptoImageMobile from "../src/assets/Frame 7965.png";
 import { createTheme } from "@mui/material/styles";
