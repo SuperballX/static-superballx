@@ -31,7 +31,7 @@ function App() {
 
   const emailRegex = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
   const url = "https://api.sendinblue.com/v3/contacts";
-  const apiKey = process.env.SEND_BLUE_SECRET_KEY
+  const apiKey = process.env.SEND_BLUE_SECRET_KEY || ""
 
   const options = {
     method: "POST",
