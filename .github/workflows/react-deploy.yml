@@ -13,6 +13,10 @@ jobs:
       contents: write
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
+    env:
+      DISABLE_ESLINT_PLUGIN: true
+      NODE_ENV: "development"
+      REACT_APP_ENV: "development"
     steps:
       - uses: actions/checkout@v3
 
