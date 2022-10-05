@@ -2,7 +2,7 @@
   "name": "superballs",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://superballx.github.io",
+  "homepage": "https://superballx.github.io/superballx/",
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
