@@ -3,7 +3,6 @@ import "./App.scss";
 import AppBar from "@mui/material/AppBar";
 import ellipseImg from "../src/assets/Ellipse 41.svg";
 import payWithCryptoImage from "../src/assets/receipt-2.svg";
-import payWithCryptoImageMobile from "../src/assets/Frame 7965.png";
 import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "@mui/material/styles";
 import { ToastContainer, toast } from "react-toastify";
@@ -141,6 +140,7 @@ function App() {
                         <img
                           src={payWithCryptoImage}
                           className="crypto-image-mobile"
+                          alt="crypto"
                         />
                         <div className="mobile-view-content">
                           <Typography className="value">£1</Typography>
@@ -156,14 +156,15 @@ function App() {
 
               <Box>
                 <Box sx={{ borderRadius: "200px" }}>
-                  <img src={ellipseImg} className="first-ellipse" />
-                  <img src={ellipseImg} className="second-ellipse" />
-                  <img src={ellipseImg} className="third-ellipse" />
+                  <img src={ellipseImg} className="first-ellipse" alt="ball"/>
+                  <img src={ellipseImg} className="second-ellipse" alt="ball"/>
+                  <img src={ellipseImg} className="third-ellipse" alt="ball"/>
                   {typeof windowSize !== "undefined" && windowSize > 760 && (
                     <div className="crypto-image-container">
                       <img
                         src={payWithCryptoImage}
                         className="crypto-image-desktop"
+                        alt="crypto"
                       />
                       <Typography className="value">£1</Typography>
                       <Typography className="pay">
