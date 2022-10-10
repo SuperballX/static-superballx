@@ -56,8 +56,8 @@ const Footer = () => {
         <Box className="footer-links-container">
           {footerLinks.map((item, index) => {
             return (
-              <a key={index} href={item.link} target="_blank">
-                <img className="icon-image" src={item.image} />
+              <a key={index} href={item.link} target="_blank" rel="noreferrer">
+                <img className="icon-image" src={item.image} alt="icon"/>
               </a>
             );
           })}
