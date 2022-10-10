@@ -3,7 +3,6 @@ import "./App.scss";
 import AppBar from "@mui/material/AppBar";
 import ellipseImg from "../src/assets/Ellipse 41.svg";
 import payWithCryptoImage from "../src/assets/receipt-2.svg";
-import payWithCryptoImageMobile from "../src/assets/Frame 7965.png";
 import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "@mui/material/styles";
 import { ToastContainer, toast } from "react-toastify";
@@ -31,7 +30,8 @@ function App() {
 
   const emailRegex = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
   const url = "https://api.sendinblue.com/v3/contacts";
-  const apiKey = process.env.SEND_BLUE_SECRET_KEY || ""
+  const apiKey =
+    "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";
 
   const options = {
     method: "POST",
@@ -140,6 +140,7 @@ function App() {
                         <img
                           src={payWithCryptoImage}
                           className="crypto-image-mobile"
+                          alt="crypto"
                         />
                         <div className="mobile-view-content">
                           <Typography className="value">£1</Typography>
@@ -155,14 +156,15 @@ function App() {
 
               <Box>
                 <Box sx={{ borderRadius: "200px" }}>
-                  <img src={ellipseImg} className="first-ellipse" />
-                  <img src={ellipseImg} className="second-ellipse" />
-                  <img src={ellipseImg} className="third-ellipse" />
+                  <img src={ellipseImg} className="first-ellipse" alt="ball"/>
+                  <img src={ellipseImg} className="second-ellipse" alt="ball"/>
+                  <img src={ellipseImg} className="third-ellipse" alt="ball"/>
                   {typeof windowSize !== "undefined" && windowSize > 760 && (
                     <div className="crypto-image-container">
                       <img
                         src={payWithCryptoImage}
                         className="crypto-image-desktop"
+                        alt="crypto"
                       />
                       <Typography className="value">£1</Typography>
                       <Typography className="pay">
