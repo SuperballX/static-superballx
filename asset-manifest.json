@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.90a23b01.css",
+    "main.js": "/static/js/main.071f869f.js",
+    "static/js/787.b5d32134.chunk.js": "/static/js/787.b5d32134.chunk.js",
+    "static/media/receipt-2.svg": "/static/media/receipt-2.626ce9780c4e0a42233a8c41d8281a5e.svg",
+    "static/media/instagram.svg": "/static/media/instagram.548a24279f1233fbee3cd0bf223efcfa.svg",
+    "static/media/reddit.svg": "/static/media/reddit.b1881475e43b95d2c673a76249b2266d.svg",
+    "static/media/discord.svg": "/static/media/discord.27c99f18a7e9f7c64f3aed098dcbaa97.svg",
+    "static/media/tiktok.svg": "/static/media/tiktok.a164411f6784e4ef8bedcaffc04d866a.svg",
+    "static/media/telegram.svg": "/static/media/telegram.a298d98aa3544e4ec0fb604dd8c3dbbf.svg",
+    "static/media/linkdein.svg": "/static/media/linkdein.32a707d31a629c8b1e35ef29c4437e50.svg",
+    "static/media/facebook.svg": "/static/media/facebook.894945805f60cb2951a769704bc37842.svg",
+    "static/media/twitter.svg": "/static/media/twitter.04c4271f067b174ad032c08260fc7eaa.svg",
+    "index.html": "/index.html",
+    "static/media/Ellipse 41.svg": "/static/media/Ellipse 41.0135a701f398b61707d32e0d53de6943.svg",
+    "main.90a23b01.css.map": "/static/css/main.90a23b01.css.map",
+    "main.071f869f.js.map": "/static/js/main.071f869f.js.map",
+    "787.b5d32134.chunk.js.map": "/static/js/787.b5d32134.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.90a23b01.css",
+    "static/js/main.071f869f.js"
+  ]
+}
